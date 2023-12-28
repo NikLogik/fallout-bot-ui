@@ -1,10 +1,10 @@
 <template>
-    <button class="btn-close" :type="props.btnType">
+    <button class="btn-close" :type="props.btnType" :on-click="onClickInternal">
         <slot/>
     </button>
 </template>
 <script setup lang="ts">
-import { defineProps, withDefaults } from 'vue'
+import { defineProps, defineEmits, withDefaults } from 'vue'
 
 interface Props {
     btnType: "button" | "submit" | "reset" | undefined
@@ -14,6 +14,11 @@ const props = withDefaults(defineProps<Props>(), {
     btnType: "button"
 })
 
+const emit = defineEmits<{
+  click: []
+}>()
+
+const onClickInternal = () => emit("click")
 
 </script>
 <style scoped>
