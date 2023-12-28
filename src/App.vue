@@ -1,22 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <span>Hello </span>
+  <MainPage/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import MainPage from './components/MainPage.vue';
 
 export default defineComponent({
   name: 'App',
+  components: {
+    'MainPage': MainPage
+  }
 });
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
   margin: 0;
