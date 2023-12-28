@@ -12,6 +12,7 @@ const webapp = useWebApp()
 const username = "test"
 const close = () => {
     webapp.sendData("You have closed App")
+    webapp.close()
 }
 
 </script>
