@@ -1,8 +1,8 @@
 <template>
     <div>
-        <!-- <Header/> -->
+        <Header/>
         <span>
-            Hello, {{ getUsername }}
+            <!-- Hello, {{ getUsername }} -->
         </span>
     </div>
 </template>
@@ -10,6 +10,6 @@
 // import Header from './Header/Header.vue';
 import { useUserData } from '../hooks/user-data';
 
-const { getUsername } = useUserData()
+// const { getUsername } = useUserData()
 
 </script>
