@@ -13,7 +13,7 @@ export default defineComponent({
     'MainPage': MainPage
   },
   computed: {
-    isReady: () => useWebApp().isReady
+    isReady: () => true
   }
 });
 </script>
