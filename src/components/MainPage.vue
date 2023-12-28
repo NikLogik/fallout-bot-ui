@@ -1,18 +1,15 @@
 <template>
-    <span>
-        Hello, {{ username }}
-    </span>
-    <button @click="close">Close</button>
+    <div>
+        <Header/>
+        <span>
+            Hello, {{ getUsername }}
+        </span>
+    </div>
 </template>
 <script setup lang="ts">
-import { useWebApp } from 'vue-tg';
+import Header from './Header/Header.vue';
+import { useUserData } from '../hooks/user-data';
 
-const webapp = useWebApp()
-
-const username = "test"
-const close = () => {
-    webapp.sendData("You have closed App")
-    webapp.close()
-}
+const { getUsername } = useUserData()
 
 </script>
