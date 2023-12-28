@@ -1,19 +1,15 @@
 <template>
-  <MainPage :v-if="isReady"/>
+  <MainPage/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import MainPage from './components/MainPage.vue';
-import { useWebApp } from 'vue-tg';
 
 export default defineComponent({
   name: 'App',
   components: {
     'MainPage': MainPage
-  },
-  computed: {
-    isReady: () => true
   }
 });
 </script>
