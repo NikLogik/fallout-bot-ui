@@ -1,4 +1,4 @@
-import { ComputedRef, computed, ref } from "vue";
+import { ComputedRef, computed } from "vue";
 import { useWebApp } from "vue-tg";
 import { debug } from "./debug-options";
 
