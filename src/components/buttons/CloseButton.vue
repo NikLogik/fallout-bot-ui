@@ -1,5 +1,5 @@
 <template>
-    <Button :on-click="closeApp"><span>Close</span></Button>
+    <Button @click="closeApp" btn-type="button"><span>Close</span></Button>
 </template>
 <script setup lang="ts">
 import { useWebApp } from 'vue-tg';

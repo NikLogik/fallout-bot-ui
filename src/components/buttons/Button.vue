@@ -1,5 +1,5 @@
 <template>
-    <button class="btn-close" :type="props.btnType" :on-click="onClickInternal">
+    <button class="btn-close" :type="props.btnType" @click="onClickInternal">
         <slot/>
     </button>
 </template>
@@ -25,6 +25,6 @@ const onClickInternal = () => emit("click")
 .btn-close {
     background-color: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
-
+    border: none;
 }
 </style>
