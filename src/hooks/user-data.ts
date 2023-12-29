@@ -14,7 +14,7 @@ export function useUserData(): UserDataState {
         if (webapp && webapp.initData) {
             let username = "Anonymous"
             try {
-                username = JSON.parse(webapp.initData)
+                username = webapp.initData
             } catch (e) {
                 username = "exception"
             }
