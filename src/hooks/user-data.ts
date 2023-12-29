@@ -12,8 +12,13 @@ export function useUserData(): UserDataState {
     
     function computeUsername(): string {
         if (webapp && webapp.initData) {
-            const username =  JSON.parse(webapp.initData).user.username
-            return username ? username : "Anonymous"
+            let username = "Anonymous"
+            try {
+                username = JSON.parse(webapp.initData).user.username
+            } catch (e) {
+                username = "exception"
+            }
+            return username
         } else {
             return "Anonymous"
         }
