@@ -11,5 +11,7 @@ import CloseButton from '../buttons/CloseButton.vue';
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
 }
 </style>

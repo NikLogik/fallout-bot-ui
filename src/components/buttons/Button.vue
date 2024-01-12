@@ -1,5 +1,5 @@
 <template>
-    <button class="btn-close" :type="props.btnType" @click="onClickInternal">
+    <button class="btn" :class="props.classes" :type="props.btnType" @click="onClickInternal">
         <slot/>
     </button>
 </template>
@@ -8,10 +8,12 @@ import { defineProps, defineEmits, withDefaults } from 'vue'
 
 interface Props {
     btnType: "button" | "submit" | "reset" | undefined
+    classes?: string[] 
 }
 
 const props = withDefaults(defineProps<Props>(), {
-    btnType: "button"
+    btnType: "button",
+    classes: () => []
 })
 
 const emit = defineEmits<{
@@ -22,9 +24,10 @@ const onClickInternal = () => emit("click")
 
 </script>
 <style scoped>
-.btn-close {
-    background-color: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
+.btn {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
     border: none;
+    border-radius: var(--button-default-radius);
 }
 </style>

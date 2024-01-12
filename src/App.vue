@@ -15,11 +15,6 @@ export default defineComponent({
 </script>
 
 <style>
-#app {
-  background: var(--tg-theme-secondary-bg-color);
-  color: var(--tg-theme-text-color);
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url("./app.css");
+
 </style>

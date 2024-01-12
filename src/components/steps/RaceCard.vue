@@ -1,6 +1,6 @@
 <template>
     <div class="race-card">
-        <Button btn-type="button">
+        <Button :classes="['race-card-button']" btn-type="button">
             <span>{{ props.name }}</span>
         </Button>
     </div>
@@ -18,3 +18,14 @@ interface Props {
 const props = defineProps<Props>()
 
 </script>
+<style scoped>
+.race-card {
+    background: var(--secondary-bg-color);
+    height: 4rem;
+}
+
+.race-card-button {
+    width: 100%;
+    height: 100%;
+}
+</style>

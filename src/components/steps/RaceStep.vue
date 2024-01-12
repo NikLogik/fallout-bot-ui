@@ -1,5 +1,5 @@
 <template>
-    <div class="step-tg race-step-container">
+    <div class="step-container">
         <div class="race-step-item" v-for="race in races" :key="race.code">
             <RaceCard :name="race.name" :code="race.code"/>
         </div>
@@ -11,14 +11,15 @@ import races from "../../utils/races";
 
 </script>
 <style>
-    .step-tg {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+.step-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
 
-    .race-step-container {
-        gap: 10px;
+@media screen and (min-width: 20rem) {
+    .step-container{
+        grid-template-columns: repeat(3, 1fr);
     }
-    
+}
 </style>
