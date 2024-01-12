@@ -1,7 +1,7 @@
 <template>
     <div class="race-card">
         <Button :classes="['race-card-button']" btn-type="button">
-            <span>{{ props.name }}</span>
+            <h4>{{ props.name }}</h4>
         </Button>
     </div>
 </template>

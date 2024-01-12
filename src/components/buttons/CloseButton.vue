@@ -1,6 +1,6 @@
 <template>
     <Button :classes="['btn-close']" @click="closeApp" btn-type="button">
-            <FontAwesomeIcon icon="xmark" style="color: var(--secondary-bg-color)"/>
+            <FontAwesomeIcon icon="xmark"/>
     </Button>
 </template>
 <script setup lang="ts">
