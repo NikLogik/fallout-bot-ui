@@ -11,11 +11,11 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const nextStep = () => {
+function nextStep() {
     router.push('races')
 }
 </script>
-<style>
+<style scoped>
 @import url("./step.css");
 
 .start-step-container {

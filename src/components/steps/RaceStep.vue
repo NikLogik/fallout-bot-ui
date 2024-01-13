@@ -29,6 +29,8 @@ function back() {
 
 </script>
 <style scoped>
+@import url("./step.css");
+
 .step {
     display: grid;
     grid-template-rows: 1fr auto;
