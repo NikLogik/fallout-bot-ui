@@ -1,6 +1,6 @@
 <template>
     <div class="step start-step-container">
-        <Button :classes="['btn-start']" :onclick="nextStep" btn-type="button">
+        <Button :classes="['btn-start']" :onclick="nextStep">
             <h3>Начать создание персонажа</h3>
         </Button>
     </div>
