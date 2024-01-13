@@ -17,14 +17,20 @@
     --button-default-radius: 0.25rem;
 }
 
-body {
-    background: var(--bg-color);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
 }
 
 #app {
     background: var(--bg-color);
+    min-height: 100%;
     color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }

@@ -1,7 +1,7 @@
 <template>
-    <div class="start-step-container">
+    <div class="step start-step-container">
         <Button :classes="['btn-start']" :onclick="nextStep" btn-type="button">
-            <h2>Начать создание персонажа</h2>
+            <h3>Начать создание персонажа</h3>
         </Button>
     </div>
 </template>
@@ -16,10 +16,15 @@ const nextStep = () => {
 }
 </script>
 <style>
+@import url("./step.css");
+
 .start-step-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .btn-start {
-    width: 100%;
+    padding: 1rem 0;
 }
 </style>

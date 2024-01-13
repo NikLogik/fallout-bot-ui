@@ -1,6 +1,6 @@
 <template>
     <Button :classes="['btn-close']" @click="closeApp" btn-type="button">
-            <FontAwesomeIcon icon="xmark"/>
+        <FontAwesomeIcon icon="xmark"/>
     </Button>
 </template>
 <script setup lang="ts">
@@ -15,3 +15,8 @@ function closeApp() {
     webapp.close()
 }
 </script>
+<style>
+.btn-close {
+    padding: 0.25rem;
+}
+</style>
